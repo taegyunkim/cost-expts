@@ -10,5 +10,5 @@ set ylabel "Cost Function"
 set xlabel "Proposal Iterations"
 set title filename[0:strstrt(filename, '.dat')-1]
 set nokey
-plot filename every ::1 using 1 with lines
+plot filename using 1 with lines
 
