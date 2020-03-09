@@ -1,0 +1,14 @@
+if (!(exists("filename"))) {
+  print "usage:"
+  print "gnuplot -e \"filename='filename.dat'\" plot.gpi"
+  exit
+}
+
+set terminal png size 800,480
+set output filename[0:strstrt(filename, '.dat')-1].'.png'
+set ylabel "Cost Function"
+set xlabel "Proposal Iterations"
+set title filename[0:strstrt(filename, '.dat')-1]
+set nokey
+plot filename using 1 with lines
+
